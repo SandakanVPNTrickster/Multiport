@@ -71,6 +71,7 @@ fi
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
 DOMAIN=squidvpn.systems
 SUB_DOMAIN=${sub}.squidvpn.systems
+WILDCARD=*.${sub}.squidvpn.systems
 CF_ID=namakunajier@gmail.com
 CF_KEY=a98cb20f3050599a7f566ebb1b58ee67739ab
 set -euo pipefail
@@ -99,6 +100,31 @@ RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_r
      -H "X-Auth-Key: ${CF_KEY}" \
      -H "Content-Type: application/json" \
      --data '{"type":"A","name":"'${SUB_DOMAIN}'","content":"'${IP}'","ttl":0,"proxied":false}')
+     
+echo "Updating DNS for ${WILDCARD}..."
+ZONE=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones?name=${DOMAIN}&status=active" \
+     -H "X-Auth-Email: ${CF_ID}" \
+     -H "X-Auth-Key: ${CF_KEY}" \
+     -H "Content-Type: application/json" | jq -r .result[0].id)
+
+RECORD=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records?name=${WILDCARD}" \
+     -H "X-Auth-Email: ${CF_ID}" \
+     -H "X-Auth-Key: ${CF_KEY}" \
+     -H "Content-Type: application/json" | jq -r .result[0].id)
+
+if [[ "${#RECORD}" -le 10 ]]; then
+     RECORD=$(curl -sLX POST "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records" \
+     -H "X-Auth-Email: ${CF_ID}" \
+     -H "X-Auth-Key: ${CF_KEY}" \
+     -H "Content-Type: application/json" \
+     --data '{"type":"A","name":"'${WILDCARD}'","content":"'${IP}'","ttl":0,"proxied":false}' | jq -r .result.id)
+fi
+
+RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records/${RECORD}" \
+     -H "X-Auth-Email: ${CF_ID}" \
+     -H "X-Auth-Key: ${CF_KEY}" \
+     -H "Content-Type: application/json" \
+     --data '{"type":"A","name":"'${WILDCARD}'","content":"'${IP}'","ttl":0,"proxied":false}')
 
 echo "Host : $SUB_DOMAIN"
 echo $SUB_DOMAIN > /root/domain
