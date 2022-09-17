@@ -112,7 +112,7 @@ echo -e "\e[36m╘════════════════════�
  [\033[1;36m15\033[0m]  Renew Cert
  [\033[1;36m16\033[0m]  Backup 
  [\033[1;36m17\033[0m]  Restore
- [\033[1;36m18\033[0m]  Panel Bot
+ [\033[1;36m18\033[0m]  Log Created Config
 "
 if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
 echo -ne
@@ -179,7 +179,10 @@ if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
     elif [[ $x -eq 17 ]]; then
        restore
      elif [[ $x -eq 18 ]]; then
-       xolpanel
+       clear
+       cat /etc/log-create-user.log
+       read -n 1 -s -r -p "Press any key to back on menu"
+       menu
     else
        menu
     fi
@@ -223,7 +226,10 @@ else
     elif [[ $x -eq 17 ]]; then
        restore
      elif [[ $x -eq 18 ]]; then
-       xolpanel
+       clear
+       cat /etc/log-create-user.log
+       read -n 1 -s -r -p "Press any key to back on menu"
+       menu
     else
        menu
     fi
