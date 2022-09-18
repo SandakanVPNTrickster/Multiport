@@ -195,15 +195,11 @@ echo ""
 wget -q https://raw.githubusercontent.com/SandakanVPNTrickster/Multiport/main/tools.sh;chmod +x tools.sh;./tools.sh
 rm tools.sh
 clear
-wget -q "https://raw.githubusercontent.com/SandakanVPNTrickster/Multiport/main/ssh/cf.sh" && chmod +x cf.sh && ./cf.sh
-clear
-yellow "Add Domain for vmess/vless/trojan dll"
+yellow "Add Domain for vmess/vless/trojan dll or just press ENTER for default Domain"
 echo " "
 read -rp "Input ur domain : " -e pp
     if [ -z $pp ]; then
-        echo -e "
-        Nothing input for domain!
-        Then a random domain will be created"
+        wget -q "https://raw.githubusercontent.com/SandakanVPNTrickster/Multiport/main/ssh/cf.sh" && chmod +x cf.sh && ./cf.sh
     else
         echo "$pp" > /root/scdomain
 	echo "$pp" > /etc/xray/scdomain
@@ -229,7 +225,6 @@ clear
 wget https://raw.githubusercontent.com/SandakanVPNTrickster/Multiport/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 wget https://raw.githubusercontent.com/SandakanVPNTrickster/Multiport/main/bckp/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 wget https://raw.githubusercontent.com/SandakanVPNTrickster/Multiport/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
-wget https://raw.githubusercontent.com/SandakanVPNTrickster/Multiport/main/xolpanel.sh && chmod +x xolpanel.sh && ./xolpanel.sh
 clear
 cat> /root/.profile << END
 # ~/.profile: executed by Bourne-compatible login shells.
@@ -268,7 +263,7 @@ gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo "=====================-[ Bagoes Vpn ]-===================="
+echo "=====================-[ SandakanVPNTrickster ]-===================="
 echo ""
 echo "------------------------------------------------------------"
 echo ""
@@ -285,9 +280,9 @@ echo "   - XRAY  Vmess TLS         : 443" | tee -a log-install.txt
 echo "   - XRAY  Vmess None TLS    : 80" | tee -a log-install.txt
 echo "   - XRAY  Vless TLS         : 443" | tee -a log-install.txt
 echo "   - XRAY  Vless None TLS    : 80" | tee -a log-install.txt
-echo "   - Trojan GRPC                 : 443" | tee -a log-install.txt
+echo "   - Trojan GRPC             : 443" | tee -a log-install.txt
 echo "   - Trojan WS               : 443" | tee -a log-install.txt
-echo "   - Sodosok WS/GRPC           : 443" | tee -a log-install.txt
+echo "   - Sodosok WS/GRPC         : 443" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
 echo "   - Timezone                : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
@@ -310,7 +305,7 @@ echo ""
 echo ""
 echo "------------------------------------------------------------"
 echo ""
-echo "===============-[ Bagoes Vpn ]-==============="
+echo "===============-[ SandakanVPNTrickster ]-==============="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
@@ -327,8 +322,3 @@ exit 0
 else
 reboot
 fi
-
-
-
-
-
