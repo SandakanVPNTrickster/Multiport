@@ -136,7 +136,7 @@ echo -e "\033[0;33mVersion : $(cat /opt/.ver) Update available to $serverV\e[0m"
 echo -e "\e[36m╒═════════════════════════════════════════════╕\033[0m"
 echo ""
 echo -e "[ \033[0;31mChangelog\033[0m ]"
-curl -sS https://raw.githubusercontent.com/bokir-tampan/biji/main/clgshow
+curl -sS https://raw.githubusercontent.com/SandakanVPNTrickster/Multiport/main/versi
 echo -e "
 "
 fi
