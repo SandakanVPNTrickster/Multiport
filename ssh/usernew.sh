@@ -118,11 +118,10 @@ echo -e "SSL/TLS    : $ssl" | tee -a /etc/log-create-user.log
 #echo -e "Squid     : $sqd" | tee -a /etc/log-create-user.log
 echo -e "UDPGW      : 7100-7300" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "OpenVPN Config : http://$IP:81/" | tee -a /etc/log-create-user.log
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "Payload WS" | tee -a /etc/log-create-user.log
-echo -e "
-PAYLOAD WEBSOCKET : GET wss://bug.com/ HTTP/1.1[crlf]Host: $domen[crlf]Upgrade: websocket[crlf]Connection: Keep-Alive[crlf][crlf]" | tee -a /etc/log-create-user.log
+##echo -e "OpenVPN Config : http://$IP:81/" | tee -a /etc/log-create-user.log
+##echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "PAYLOAD WEBSOCKET" | tee -a /etc/log-create-user.log
+echo -e "GET wss://bug.com/ HTTP/1.1[crlf]Host: $domen[crlf]Upgrade: websocket[crlf]Connection: Keep-Alive[crlf][crlf]" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 
 else
@@ -144,11 +143,10 @@ echo -e "SSL/TLS    : $ssl" | tee -a /etc/log-create-user.log
 #echo -e "Squid     : $sqd" | tee -a /etc/log-create-user.log
 echo -e "UDPGW      : 7100-7300" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "OpenVPN Config : http://$IP:81/" | tee -a /etc/log-create-user.log
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "Payload WS" | tee -a /etc/log-create-user.log
-echo -e "
-PAYLOAD WEBSOCKET : GET wss://bug.com/ HTTP/1.1[crlf]Host: $domen[crlf]Upgrade: websocket[crlf]Connection: Keep-Alive[crlf][crlf]" | tee -a /etc/log-create-user.log
+##echo -e "OpenVPN Config : http://$IP:81/" | tee -a /etc/log-create-user.log
+##echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "PAYLOAD WEBSOCKET" | tee -a /etc/log-create-user.log
+echo -e "GET wss://bug.com/ HTTP/1.1[crlf]Host: $domen[crlf]Upgrade: websocket[crlf]Connection: Keep-Alive[crlf][crlf]" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 fi
 echo "" | tee -a /etc/log-create-user.log
