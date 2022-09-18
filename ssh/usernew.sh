@@ -104,26 +104,25 @@ if [[ ! -z "${PID}" ]]; then
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e "\E[0;41;36m            SSH Account            \E[0m" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "Username : $Login" | tee -a /etc/log-create-user.log
-echo -e "Password : $Pass" | tee -a /etc/log-create-user.log
+echo -e "Username   : $Login" | tee -a /etc/log-create-user.log
+echo -e "Password   : $Pass" | tee -a /etc/log-create-user.log
 echo -e "Expired On : $exp" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "IP : $IP" | tee -a /etc/log-create-user.log
-echo -e "Host : $domen" | tee -a /etc/log-create-user.log
-echo -e "OpenSSH : $opensh" | tee -a /etc/log-create-user.log
-echo -e "Dropbear : $db" | tee -a /etc/log-create-user.log
-echo -e "SSH-WS : $portsshws" | tee -a /etc/log-create-user.log
+echo -e "IP         : $IP" | tee -a /etc/log-create-user.log
+echo -e "Host       : $domen" | tee -a /etc/log-create-user.log
+echo -e "OpenSSH    : $opensh" | tee -a /etc/log-create-user.log
+echo -e "Dropbear   : $db" | tee -a /etc/log-create-user.log
+echo -e "SSH-WS     : $portsshws" | tee -a /etc/log-create-user.log
 echo -e "SSH-SSL-WS : $wsssl" | tee -a /etc/log-create-user.log
-echo -e "SSL/TLS : $ssl" | tee -a /etc/log-create-user.log
-#echo -e "Port Squid : $sqd" | tee -a /etc/log-create-user.log
-echo -e "UDPGW : 7100-7300" | tee -a /etc/log-create-user.log
+echo -e "SSL/TLS    : $ssl" | tee -a /etc/log-create-user.log
+#echo -e "Squid     : $sqd" | tee -a /etc/log-create-user.log
+echo -e "UDPGW      : 7100-7300" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 #echo -e "OpenVPN Config : http://$IP:81/" | tee -a /etc/log-create-user.log
 #echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e "Payload WS" | tee -a /etc/log-create-user.log
 echo -e "
-GET / HTTP/1.1[crlf]Host: $domen[crlf]Upgrade: websocket[crlf][crlf]
-" | tee -a /etc/log-create-user.log
+PAYLOAD WEBSOCKET : GET wss://bug.com/ HTTP/1.1[crlf]Host: $domen[crlf]Upgrade: websocket[crlf]Connection: Keep-Alive[crlf][crlf]" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 
 else
@@ -131,26 +130,25 @@ else
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e "\E[0;41;36m            SSH Account            \E[0m" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "Username : $Login" | tee -a /etc/log-create-user.log
-echo -e "Password : $Pass" | tee -a /etc/log-create-user.log
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "IP : $IP" | tee -a /etc/log-create-user.log
-echo -e "Host : $domen" | tee -a /etc/log-create-user.log
-echo -e "OpenSSH : $opensh" | tee -a /etc/log-create-user.log
-echo -e "Dropbear : $db" | tee -a /etc/log-create-user.log
-echo -e "SSH-WS : $portsshws" | tee -a /etc/log-create-user.log
+echo -e "Username   : $Login" | tee -a /etc/log-create-user.log
+echo -e "Password   : $Pass" | tee -a /etc/log-create-user.log
+echo -e "Expired On : $exp" | tee -a /etc/log-create-user.log
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "IP         : $IP" | tee -a /etc/log-create-user.log
+echo -e "Host       : $domen" | tee -a /etc/log-create-user.log
+echo -e "OpenSSH    : $opensh" | tee -a /etc/log-create-user.log
+echo -e "Dropbear   : $db" | tee -a /etc/log-create-user.log
+echo -e "SSH-WS     : $portsshws" | tee -a /etc/log-create-user.log
 echo -e "SSH-SSL-WS : $wsssl" | tee -a /etc/log-create-user.log
-echo -e "SSL/TLS : $ssl" | tee -a /etc/log-create-user.log
-echo -e "Port Squid : $sqd" | tee -a /etc/log-create-user.log
-echo -e "UDPGW : 7100-7300" | tee -a /etc/log-create-user.log
-#echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "SSL/TLS    : $ssl" | tee -a /etc/log-create-user.log
+#echo -e "Squid     : $sqd" | tee -a /etc/log-create-user.log
+echo -e "UDPGW      : 7100-7300" | tee -a /etc/log-create-user.log
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 #echo -e "OpenVPN Config : http://$IP:81/" | tee -a /etc/log-create-user.log
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "Expired On     : $exp" | tee -a /etc/log-create-user.log
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+#echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "Payload WS" | tee -a /etc/log-create-user.log
 echo -e "
-GET / HTTP/1.1[crlf]Host: $domen[crlf]Upgrade: websocket[crlf][crlf]
-" | tee -a /etc/log-create-user.log
+PAYLOAD WEBSOCKET : GET wss://bug.com/ HTTP/1.1[crlf]Host: $domen[crlf]Upgrade: websocket[crlf]Connection: Keep-Alive[crlf][crlf]" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 fi
 echo "" | tee -a /etc/log-create-user.log
