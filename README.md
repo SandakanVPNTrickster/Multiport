@@ -1,4 +1,4 @@
-# Multiport Ws
+<h2 align="center"> MULTIPORT WS </h2>
 
  <h2 align="center"><img src="https://img.shields.io/badge/Multiport Script VPN By-SquidVPN-blue.svg"></h2>
 
@@ -35,9 +35,9 @@ src="https://img.shields.io/badge/Service-Xray-success.svg"> <img src="https://i
 
 
 
- ## Script for Sell Only. Contact owner on Telegram @SandakanVPNTrickster <a href="https://t.me/SandakanVPNTrickster" target=”_blank”><img src="https://img.shields.io/static/v1?style=for-the-badge&logo=Telegram&label=Telegram&message=Click%20Here&color=blue"></a>
+ ## Script for Sell Only. Contact owner on Telegram @SandakanVPNTrickster <a href="https://t.me/SandakanVPNTrickster" target=”_blank”><img src="https://img.shields.io/static/v1?style=for-the-badge&logo=Telegram&label=Telegram&message=Click%20Here&color=darkblue"></a>
 
- ## For Buy Script : Contact Telegram @SandakanVPNTrickster <a href="https://t.me/SandakanVPNTrickster" target=”_blank”><img src="https://img.shields.io/static/v1?style=for-the-badge&logo=Telegram&label=Telegram&message=Click%20Here&color=blue"></a>
+ ## For Buy Script : Contact Telegram @SandakanVPNTrickster <a href="https://t.me/SandakanVPNTrickster" target=”_blank”><img src="https://img.shields.io/static/v1?style=for-the-badge&logo=Telegram&label=Telegram&message=Click%20Here&color=darkblue"></a>
 
 ## Credit :
 
@@ -46,6 +46,6 @@ src="https://img.shields.io/badge/Service-Xray-success.svg"> <img src="https://i
 *   SandakanVPN
 
 <p align="center">
-  <a><img src="https://img.shields.io/badge/Copyright%20©-SquidVPN%20AutoScriptVPN%202022.%20All%20rights%20reserved...-blueviolet.svg" style="max-width:200%;">
+  <a><img src="https://img.shields.io/badge/Copyright%20©-SquidVPN%20AutoScriptVPN%202022.%20All%20rights%20reserved...-red.svg" style="max-width:200%;">
     </p>
    </p>
