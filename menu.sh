@@ -76,7 +76,7 @@ upminutes=`uptime -p | awk '{print $4,$5}' | cut -d , -f1`
 uptimecek=`uptime -p | awk '{print $6,$7}' | cut -d , -f1`
 cekup=`uptime -p | grep -ow "day"`
 IPVPS=$(curl -s ipinfo.io/ip )
-serverV=$( curl -sS https://raw.githubusercontent.com/bokir-tampan/test/main/versi)
+serverV=$( curl -sS https://raw.githubusercontent.com/SandakanVPNTrickster/Multiport/main/versi)
 
 if [ "$cekup" = "day" ]; then
 echo    -e   "System Uptime   :  $uphours $upminutes $uptimecek"
@@ -125,7 +125,7 @@ echo ""
 #echo -e "\e[36m╘════════════════════════════════════════════════════╛\033[0m"
 echo -e "\e[36m╒═════════════════════════════════════════════╕\033[0m"
 if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
-echo -e "Version       :\033[1;36m $(cat /opt/.ver) Latest Version\e[0m"
+echo -e "Version       :\033[1;36m $(cat /opt/.ver)\e[0m"
 echo -e "Client Name   : $Name"
 echo -e "Expiry script : $Exp"
 rm -f /home/needupdate > /dev/null 2>&1
